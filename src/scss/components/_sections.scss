@@ -1,0 +1,54 @@
+.logo {
+  position: relative;
+  z-index: 10;
+  top: 20%;
+}
+
+.logo__circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  border: 3px solid $color-canvas;
+  margin: 0 auto;
+}
+
+.logo__header {
+  text-transform: uppercase;
+  line-height: 0.9;
+}
+
+.logo__header-caption {
+  font-size: $text-beta;
+}
+
+.logo__motto {
+  padding: 0.5em 0;
+  margin: 0 auto;
+  width: 80%;
+  font-size: $text-delta;
+  text-align: center;
+  background-image: linear-gradient(to right, transparent, rgb(20, 26, 5), transparent);
+}
+
+.logo__tracery {
+
+  &:before {
+    content: "";
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: -2px;
+    width: 37px;
+    height: 16px;
+    background: url('../images/tracery_left.png') no-repeat;
+  }
+
+  &:after {
+    content: "";
+    display: inline-block;
+    margin-left: 5px;
+    margin-bottom: -2px;
+    width: 37px;
+    height: 16px;
+    background: url('../images/tracery_right.png') no-repeat;
+  }
+}

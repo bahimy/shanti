@@ -1,0 +1,84 @@
+////// Color section ///////
+
+$color-darkgreen: rgb(42, 51, 15);
+$color-mediumgreen: rgb(105, 128, 38);
+$color-lightgreen: rgb(224, 242, 182);
+$color-gold: rgb(191, 128, 0);
+$color-blue: rgb(15, 153, 153);
+
+$color-canvas: $color-lightgreen;
+
+
+
+
+
+////// Typography section //////
+
+$text-sans: "Segoe UI", Tahoma, Arial, sans-serif;
+$text-serif: serif;
+
+html {
+  font-size: 62.5%;
+  font-family: $text-serif;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+// seed fot font sizes generation
+$text-initial-size: 50px;
+
+// forms array of proportional tex sisez
+$text-sizes: formTextSizes($text-initial-size);
+
+$text-alpha: nth($text-sizes, 1);
+$text-beta: nth($text-sizes, 2);
+$text-gamma: nth($text-sizes, 3);
+$text-delta: nth($text-sizes, 4);
+$text-epsilon: nth($text-sizes, 5);
+$text-zeta: nth($text-sizes, 6);
+
+h1,
+h2,
+h3 {
+  font-family: $text-sans;
+  font-weight: normal;
+  text-align: center;
+}
+
+h1 {
+  font-size: $text-alpha;
+}
+
+h2 {
+  font-size: $text-beta;
+}
+
+h3 {
+  font-size: $text-gamma;
+}
+
+h4 {
+  font-size: $text-delta;
+}
+
+h5 {
+  font-size: $text-epsilon;
+  margin: 0;
+}
+
+h6 {
+  font-size: $text-zeta;
+}
+
+
+
+
+
+////// Miscellaneous //////
+
+* {
+  box-sizing: border-box;
+}

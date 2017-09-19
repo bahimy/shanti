@@ -14,7 +14,7 @@ var gulp = require('gulp'),
     cssnano = require('cssnano'),
 
     // Using in "if" branching to produce dev/prod output
-    devBuild = true, // (process.env.NODE_ENV !== 'production')
+    devBuild = false, // (process.env.NODE_ENV !== 'production')
 
     folder = {
         src: 'src/',
@@ -32,6 +32,14 @@ gulp.task('images', function() {
     return gulp.src(folder.src + 'images/**/*')
         .pipe(newer(out))
         .pipe(imagemin( {optimizationLevel: 5} ))
+        .pipe(gulp.dest(out))
+})
+
+// Video processing
+gulp.task('video', function() {
+    var out = folder.build + 'video'
+    return gulp.src(folder.src + 'video/**/*')
+        .pipe(newer(out))
         .pipe(gulp.dest(out))
 })
 
@@ -64,7 +72,7 @@ gulp.task('js', function() {
 })
 
 // CSS processing
-gulp.task('css', ['images', 'copyfonts'], function() {
+gulp.task('css', ['images', 'copyfonts', 'video'], function() {
     var postCssOpts = [
         assets({ loadPaths: ['images/'] }),
         autoprefixer({ browsers: ['last 2 versions', '> 2%'] }),
@@ -96,6 +104,7 @@ gulp.task('run', ['html', 'css', 'js'])
 // Watch for the changes
 gulp.task('watch', function() {
     gulp.watch(folder.src + 'images/**/*', ['images']);
+    gulp.watch(folder.src + 'video/**/*', ['video']);
     gulp.watch(folder.src + 'html/**/*', ['html']);
     gulp.watch(folder.src + 'js/**/*', ['js']);
     gulp.watch(folder.src + 'scss/**/*', ['css']);
