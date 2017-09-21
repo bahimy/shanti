@@ -1,5 +1,5 @@
 p {
-  font-size: $text-delta;
+  font-size: $text-epsilon;
 }
 
 .name {
@@ -11,9 +11,11 @@ p {
 .caption {
   font-size: $text-delta;
   font-family: $text-sans;
+  color: $color-darkgreen;
   margin-top: 0;
 }
 
 .description {
   width: 60%;
+  margin-left: 1em;
 }

@@ -29,7 +29,7 @@ body, html {
 }
 
 // seed fot font sizes generation
-$text-initial-size: 50px;
+$text-initial-size: 70px;
 
 // forms array of proportional tex sisez
 $text-sizes: formTextSizes($text-initial-size);
@@ -43,7 +43,8 @@ $text-zeta: nth($text-sizes, 6);
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: $text-sans;
 }
 
@@ -58,11 +59,11 @@ h2 {
 
 h3 {
   font-size: $text-beta;
-  margin-bottom: 0.6em;
 }
 
 h4 {
   font-size: $text-gamma;
+  margin-bottom: 0.6em;
 }
 
 h5 {

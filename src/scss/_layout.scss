@@ -38,12 +38,27 @@
     position: absolute;
     z-index: 10;
     left: 0;
-    right: 0;
+    right: -50px;
     top: 0;
     bottom: 0;
     background-image: url("../images/Aleksandra-Lifer.png");
     background-repeat: no-repeat;
     background-position: bottom right;
-    background-size: 45% auto;
+    background-size: 42% auto;
+  }
+}
+
+.l-buttons {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.l-buttons__button {
+  display: inline-block;
+  margin-right: 1em;
+
+  &:last-child() {
+    margin-right: 0;
   }
 }
