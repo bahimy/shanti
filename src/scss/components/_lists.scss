@@ -1,0 +1,47 @@
+.perks {
+  position: relative;
+  list-style-type: none;
+  padding: 10px 0;
+  height: 100px;
+  margin: 0;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100px;
+    width: 5000px;
+    background-color: $color-mediumgreen;
+    margin-top: -10px;
+    margin-left: -2500px;
+    z-index: -1;
+  }
+}
+
+%perks__item {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  float: left;
+  height: 80px;
+  padding-left: 90px;
+  width: 220px;
+  font-size: $text-delta;
+  font-family: $text-sans;
+  color: $color-canvas;
+}
+
+.perks__item1 {
+  @extend %perks__item;
+  background: url('../images/perk_years.png') no-repeat;
+}
+
+.perks__item2 {
+  @extend %perks__item;
+  background: url('../images/perk_types.png') no-repeat;
+}
+
+.perks__item3 {
+  @extend %perks__item;
+  background: url('../images/perk_budha.png') no-repeat;
+}

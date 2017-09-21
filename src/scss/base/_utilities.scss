@@ -3,3 +3,31 @@
   display: table;
   clear: both;
 }
+
+.u-text-regular {
+  font-weight: normal;
+}
+
+.u-text-colormedium {
+  color: $color-mediumgreen;
+}
+
+.u-text-center {
+  text-align: center !important;
+}
+
+.u-text-alpha {
+  font-size: $text-alpha !important;
+}
+
+.u-text-beta {
+  font-size: $text-beta !important;
+}
+
+.u-text-gamma {
+  font-size: $text-gamma !important;
+}
+
+.u-text-delta {
+  font-size: $text-delta !important;
+}
