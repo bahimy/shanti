@@ -8,6 +8,7 @@
 .l-container {
   max-width: 1024px;
   margin: 0 auto;
+  padding: 0 12px;
 }
 
 
@@ -45,6 +46,7 @@
     background-repeat: no-repeat;
     background-position: bottom right;
     background-size: 42% auto;
+    pointer-events: none;
   }
 }
 
@@ -61,4 +63,15 @@
   &:last-child() {
     margin-right: 0;
   }
+}
+
+
+
+
+
+////// Remedy section //////
+
+.l-remedy {
+  background-color: $color-darkgreen;
+  padding: 3em 0;
 }
