@@ -1,23 +1,9 @@
 ////// Perks section ///////
 
 .perks {
-  position: relative;
   list-style-type: none;
   padding: 10px 0;
-  height: 100px;
   margin: 0;
-
-  &:before {
-    content: "";
-    display: block;
-    position: absolute;
-    height: 100px;
-    width: 5000px;
-    background-color: $color-mediumgreen;
-    margin-top: -10px;
-    margin-left: -2500px;
-    z-index: -1;
-  }
 }
 
 %perks__item {
@@ -63,12 +49,14 @@
 }
 
 .remedy__container--left {
+  padding-right: 33%;
   @extend %remedy__container;
   text-align: left;
   background-image: linear-gradient(to right, transparent, rgba($color-lightgreen, .5) 15%, transparent 70%);
 }
 
 .remedy__container--right {
+  padding-left: 33%;
   @extend %remedy__container;
   text-align: right;
   background-image: linear-gradient(to right, transparent 30%, rgba($color-lightgreen, .5) 85%, transparent);
@@ -79,8 +67,9 @@
   height: 150px;
   border-radius: 75px;
   background-color: $color-lightgreen;
-  box-shadow: 0 0 0 3px $color-darkgreen,
-              0 0 0 6px $color-lightgreen;
+  background-size: cover;
+  box-shadow: inset 0 0 0 3px $color-lightgreen,
+              inset 0 0 0 6px $color-darkgreen;
 }
 
 .remedy__image--left {
@@ -101,4 +90,62 @@
 
 .remedy__text {
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.remedy__image--bg1 { background-image: url("../images/tn_headache.jpg"); }
+.remedy__image--bg2 { background-image: url("../images/tn_strain.jpg"); }
+.remedy__image--bg3 { background-image: url("../images/tn_nervous_girl.jpg"); }
+.remedy__image--bg4 { background-image: url("../images/tn_pressure.jpg"); }
+.remedy__image--bg5 { background-image: url("../images/tn_obesity.jpg"); }
+.remedy__image--bg6 { background-image: url("../images/tn_pregnancy.jpg"); }
+
+
+
+
+
+////// Massage section //////
+.description {
+  margin: 5em 0;
+}
+
+.description__image {
+  display: block;
+  position: relative;
+  z-index: -1;
+  margin-left: -15px;
+  max-width: 80%;
+}
+
+.description__container {
+  width: 80%;
+  margin: 0 auto;
+  border-bottom: 2px solid $color-darkgreen;
+}
+
+.description__header {
+  background-color: $color-darkgreen;
+  color: $color-canvas;
+  margin: 0;
+  padding: 0 1em;
+  margin-top: -1.125em;
+  font-weight: normal;
+}
+
+.description__text {
+  margin-left: 2em;
+  margin-right: 1em;
+}
+
+.description__details {
+  text-align: right;
+  margin-right: 2em;
+}
+
+.description__link {
+  color: $color-blue;
+  text-align: right;
 }

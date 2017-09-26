@@ -11,6 +11,24 @@
   padding: 0 12px;
 }
 
+.l-streak {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100px;
+    width: 5000px;
+    background-color: $color-mediumgreen;
+    margin-left: -2500px;
+    z-index: -1;
+  }
+}
+
 
 
 
@@ -21,16 +39,9 @@
   overflow: hidden;
 }
 
-.l-streak {
-  position: relative;
-  left: 0;
-  right: 0;
-  background-color: $color-mediumgreen;
-}
-
 .l-background {
   position: relative;
-  z-index: -1;
+  z-index: 1;
   padding-bottom: 3em;
 
   &:after {
@@ -73,5 +84,16 @@
 
 .l-remedy {
   background-color: $color-darkgreen;
-  padding: 3em 0;
+  padding-top: 1px;
+  padding-bottom: 3em;
+}
+
+
+
+
+
+////// Massage types //////
+
+.l-types {
+  overflow: hidden;
 }
