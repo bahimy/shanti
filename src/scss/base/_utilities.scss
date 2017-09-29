@@ -5,20 +5,41 @@
 }
 
 .u-text-regular {
-  font-weight: normal;
+  font-weight: normal !important;
 }
 
+.u-text-sans {
+  font-family: $text-sans !important;
+}
+
+
+////// Text color utilities //////
+
 .u-text-colormedium {
-  color: $color-mediumgreen;
+  color: $color-mediumgreen !important;
 }
 
 .u-text-colorlight {
-  color: $color-lightgreen;
+  color: $color-lightgreen !important;
 }
+
+
+////// Text positioning utilities //////
 
 .u-text-center {
   text-align: center !important;
 }
+
+.u-text-right {
+  text-align: right !important;
+}
+
+.u-text-leftindent {
+  margin-left: 1em !important;
+}
+
+
+////// Text sizes utilities //////
 
 .u-text-alpha {
   font-size: $text-alpha !important;

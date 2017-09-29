@@ -8,11 +8,12 @@
 .l-container {
   max-width: 1024px;
   margin: 0 auto;
-  padding: 0 12px;
+  padding: 1em 1em 3em;
 }
 
 .l-streak {
   position: relative;
+  height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -96,4 +97,34 @@
 
 .l-types {
   overflow: hidden;
+}
+
+
+
+
+
+////// Testimonials section //////
+
+.l-testimonials {
+  background-color: $color-darkgreen;
+}
+
+
+
+
+
+////// Contacts sectioon //////
+
+.l-contacts {
+  background-color: $color-darkgreen;
+  color: $color-lightgreen;
+}
+
+.l-map {
+  width: 60%;
+  height: 300px;
+  float: right;
+  border: 2px solid $color-mediumgreen;
+  border-radius: 10px;
+  // pointer-events: none;
 }

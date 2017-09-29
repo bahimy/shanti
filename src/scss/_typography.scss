@@ -2,6 +2,11 @@ p {
   font-size: $text-epsilon;
 }
 
+a {
+  text-decoration: none;
+  color: $color-blue;
+}
+
 .name {
   color: $color-gold;
   font-weight: bold;
