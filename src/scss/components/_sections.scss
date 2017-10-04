@@ -70,6 +70,8 @@
   &:before {
     content: "";
     display: inline-block;
+    display: block;
+    float: left;
     margin-right: 5px;
     width: 37px;
     height: 16px;
@@ -79,9 +81,69 @@
   &:after {
     content: "";
     display: inline-block;
+    display: block;
     margin-left: 5px;
     width: 37px;
     height: 16px;
     background: url('../images/tracery_right.png') no-repeat;
   }
+}
+
+@media screen and (max-width: 680px) {
+  .hero__header {
+    font-size: $text-beta;
+  }
+
+  .hero__header-caption {
+    font-size: $text-gamma;
+  }
+
+  .hero__motto {
+    font-size: $text-epsilon;
+  }
+}
+
+
+
+
+
+////// popup section //////
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid $color-darkgreen;
+  border-radius: 10px;
+  padding: 10px 30px;
+  z-index: 100;
+  background-color: $color-lightgreen;
+  opacity: 0;
+  transition: all .33s ease-out;
+  max-height: 90%;
+  max-width: 90%;
+}
+
+.popup__button {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-family: $text-sans;
+  margin: 0 0 10px auto;
+  background-color: $color-darkgreen;
+  color: $color-canvas;
+  cursor: default;
+}
+
+.prices {
+  height: 80vh;
+  overflow: auto;
+}
+
+.school {
+  height: 80vh;
+  width: 80vw;
+  overflow: auto;
 }

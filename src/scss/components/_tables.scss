@@ -1,0 +1,18 @@
+.pricelist {
+  border-collapse: collapse;
+  border-bottom: 3px solid $color-darkgreen;
+}
+
+.pricelist th, .pricelist td {
+  padding: 0.2em 1em;
+}
+
+.pricelist thead tr {
+  text-align: left;
+  color: $color-canvas;
+  background-color: $color-darkgreen;
+}
+
+.pricelist tr {
+  border-bottom: 1px solid $color-mediumgreen;
+}

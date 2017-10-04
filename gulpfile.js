@@ -14,7 +14,7 @@ var gulp = require('gulp'),
     cssnano = require('cssnano'),
 
     // Using in "if" branching to produce dev/prod output
-    devBuild = false, // (process.env.NODE_ENV !== 'production')
+    devBuild = true, // (process.env.NODE_ENV !== 'production')
 
     folder = {
         src: 'src/',

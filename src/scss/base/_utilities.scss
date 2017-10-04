@@ -12,6 +12,22 @@
   font-family: $text-sans !important;
 }
 
+.u-hidden {
+  visibility: hidden !important;
+}
+
+.u-removed {
+  display: none;
+}
+
+.u-opaque {
+  opacity: 1 !important;
+}
+
+.u-nonebreak {
+  white-space: pre;
+}
+
 
 ////// Text color utilities //////
 
