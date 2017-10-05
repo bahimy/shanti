@@ -491,7 +491,7 @@ h6 {
 .l-container {
   max-width: 1024px;
   margin: 0 auto;
-  padding: 1em 1em 3em; }
+  padding: 1em 2em 3em; }
 
 .l-streak {
   position: relative;
@@ -581,7 +581,8 @@ a {
 .name {
   color: #bf8000;
   font-weight: bold;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  font-size: 70px; }
 
 .caption {
   font-size: 29.531px;
@@ -642,32 +643,38 @@ a {
   font-size: 52.5px; }
 
 .hero__motto {
-  padding: 0.5em 0;
   margin: 0 auto;
   width: 80%;
-  font-size: 29.531px;
   text-align: center;
   background-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(#141a05), to(transparent));
   background-image: linear-gradient(to right, transparent, #141a05, transparent); }
 
-.hero__tracery:before {
+.hero__tracery-left {
   content: "";
   display: inline-block;
-  display: block;
-  float: left;
-  margin-right: 5px;
   width: 37px;
   height: 16px;
+  margin-right: 3px;
   background: url("../images/tracery_left.png") no-repeat; }
 
-.hero__tracery:after {
+.hero__tracery-right {
   content: "";
   display: inline-block;
-  display: block;
-  margin-left: 5px;
   width: 37px;
   height: 16px;
+  margin-left: 3px;
   background: url("../images/tracery_right.png") no-repeat; }
+
+.hero__motto-text {
+  display: inline-block;
+  font-size: 29.531px;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em; }
+
+.hero__break {
+  display: none; }
+
+/* media section */
 
 .popup {
   position: fixed;
@@ -939,10 +946,64 @@ a {
 .pricelist tr {
   border-bottom: 1px solid #698026; }
 
+@media screen and (max-width: 900px) {
+  h4 {
+    font-size: 29.531px; }
+  .quote {
+    font-size: 16.611px; }
+  .caption {
+    font-size: 22.148px; }
+  .perks__item1, .perks__item2, .perks__item3 {
+    font-size: 16.611px; }
+  .perks__item1,
+  .perks__item2,
+  .perks__item3 {
+    background-size: 60px auto;
+    padding-left: 67.5px;
+    height: 60px;
+    width: 165px; }
+  .button, .button--inverted {
+    font-size: 16.611px; } }
+
+@media screen and (max-width: 780px) {
+  .name {
+    font-size: 52.5px; } }
+
 @media screen and (max-width: 680px) {
+  .hero__circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px; }
   .hero__header {
     font-size: 52.5px; }
   .hero__header-caption {
     font-size: 39.375px; }
-  .hero__motto {
+  .hero__motto-text {
     font-size: 22.148px; } }
+
+@media screen and (max-width: 550px) {
+  .hero__break {
+    display: unset; } }
+
+@media screen and (max-width: 420px) {
+  .hero__tracery-right,
+  .hero__tracery-left {
+    display: none; }
+  .hero__header {
+    font-size: 39.375px; }
+  .hero__header-caption {
+    font-size: 29.531px; } }
+
+@media screen and (orientation: landscape) and (max-height: 640px) {
+  .hero__header {
+    font-size: 39.375px; }
+  .hero__header-caption {
+    font-size: 29.531px; }
+  .hero__motto-text {
+    font-size: 16.611px; }
+  .hero__circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px; }
+  .hero__logo {
+    top: 10%; } }

@@ -57,39 +57,51 @@
 }
 
 .hero__motto {
-  padding: 0.5em 0;
   margin: 0 auto;
   width: 80%;
-  font-size: $text-delta;
   text-align: center;
   background-image: linear-gradient(to right, transparent, rgb(20, 26, 5), transparent);
 }
 
-.hero__tracery {
-
-  &:before {
-    content: "";
-    display: inline-block;
-    display: block;
-    float: left;
-    margin-right: 5px;
-    width: 37px;
-    height: 16px;
-    background: url('../images/tracery_left.png') no-repeat;
-  }
-
-  &:after {
-    content: "";
-    display: inline-block;
-    display: block;
-    margin-left: 5px;
-    width: 37px;
-    height: 16px;
-    background: url('../images/tracery_right.png') no-repeat;
-  }
+.hero__tracery-left {
+  content: "";
+  display: inline-block;
+  width: 37px;
+  height: 16px;
+  margin-right: 3px;
+  background: url('../images/tracery_left.png') no-repeat;
 }
 
+.hero__tracery-right {
+  content: "";
+  display: inline-block;
+  width: 37px;
+  height: 16px;
+  margin-left: 3px;
+  background: url('../images/tracery_right.png') no-repeat;
+}
+
+.hero__motto-text {
+  display: inline-block;
+  font-size: $text-delta;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.hero__break {
+  display: none;
+}
+
+
+/* media section */
+
 @media screen and (max-width: 680px) {
+  .hero__circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+  }
+
   .hero__header {
     font-size: $text-beta;
   }
@@ -98,8 +110,55 @@
     font-size: $text-gamma;
   }
 
-  .hero__motto {
+  .hero__motto-text {
     font-size: $text-epsilon;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .hero__break {
+    display: unset;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .hero__tracery-right,
+  .hero__tracery-left {
+    display: none;
+  }
+
+  .hero__header {
+    font-size: $text-gamma;
+  }
+
+  .hero__header-caption {
+    font-size: $text-delta;
+  }
+}
+
+@media screen
+and (orientation: landscape)
+and (max-height: 640px) {
+  .hero__header {
+    font-size: $text-gamma;
+  }
+
+  .hero__header-caption {
+    font-size: $text-delta;
+  }
+
+  .hero__motto-text {
+    font-size: $text-zeta;
+  }
+
+  .hero__circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+  }
+
+  .hero__logo {
+    top: 10%;
   }
 }
 

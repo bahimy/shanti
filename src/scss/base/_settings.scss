@@ -77,6 +77,12 @@ h6 {
   font-size: $text-epsilon;
 }
 
+@media screen and (max-width: 900px) {
+  h4 {
+    font-size: $text-delta;
+  }
+}
+
 
 
 

@@ -34,6 +34,21 @@
   background: url('../images/perk_budha.png') no-repeat;
 }
 
+@media screen and (max-width: 900px) {
+  %perks__item {
+    font-size: $text-zeta;
+  }
+
+  .perks__item1,
+  .perks__item2,
+  .perks__item3 {
+    background-size: 60px auto;
+    padding-left: 67.5px;
+    height: 60px;
+    width: 165px;
+  }
+}
+
 
 
 

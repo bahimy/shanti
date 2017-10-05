@@ -11,6 +11,7 @@ a {
   color: $color-gold;
   font-weight: bold;
   margin-bottom: 0;
+  font-size: $text-alpha;
 }
 
 .caption {
@@ -23,4 +24,20 @@ a {
 .quote {
   width: 60%;
   margin-left: 1em;
+}
+
+@media screen and (max-width: 900px) {
+  .quote {
+    font-size: $text-zeta;
+  }
+
+  .caption {
+    font-size: $text-epsilon;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .name {
+    font-size: $text-beta;
+  }
 }

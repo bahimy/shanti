@@ -12,3 +12,9 @@
   background-color: $color-canvas;
   color: $color-mediumgreen;
 }
+
+@media screen and (max-width: 900px) {
+  .button {
+    font-size: $text-zeta;
+  }
+}
