@@ -510,11 +510,14 @@ h6 {
     content: "";
     display: block;
     position: absolute;
-    height: 100px;
+    top: 0;
+    bottom: 0;
     width: 5000px;
     background-color: #698026;
     margin-left: -2500px;
     z-index: -1; }
+
+/* Medias */
 
 .l-personal {
   overflow: hidden; }
@@ -548,6 +551,8 @@ h6 {
   margin-right: 1em; }
   .l-buttons__button:last-child {
     margin-right: 0; }
+
+/* medias */
 
 .l-remedy {
   background-color: #2a330f;
@@ -590,9 +595,14 @@ a {
   color: #2a330f;
   margin-top: 0; }
 
+.caption__brake {
+  display: none; }
+
 .quote {
   width: 60%;
   margin-left: 1em; }
+
+/* medias */
 
 .hero {
   position: relative;
@@ -818,14 +828,16 @@ a {
 .remedy__image--bg6 {
   background-image: url("../images/tn_pregnancy.jpg"); }
 
+/* medias */
+
 .description {
-  margin: 5em 0; }
+  margin: 4em 0; }
 
 .description__image {
   display: block;
   position: relative;
   z-index: -1;
-  margin-left: -1em;
+  margin-left: -2em;
   max-width: 80%; }
 
 .description__container {
@@ -851,6 +863,8 @@ a {
 
 .description__link {
   text-align: right; }
+
+/* Medias */
 
 .testimonial {
   color: #e0f2b6; }
@@ -895,6 +909,8 @@ a {
     width: 5000px;
     z-index: -1;
     margin-left: -300px; }
+
+/* Medias */
 
 .social {
   margin: 0;
@@ -946,9 +962,37 @@ a {
 .pricelist tr {
   border-bottom: 1px solid #698026; }
 
+@media screen and (max-width: 800px) {
+  .l-container {
+    padding: 1em 1em 1em; } }
+
+@media screen and (max-width: 680px) {
+  .l-background:after {
+    background-image: none; }
+  .quote {
+    width: auto; }
+  .hero__circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px; }
+  .hero__header {
+    font-size: 52.5px; }
+  .hero__header-caption {
+    font-size: 39.375px; }
+  .hero__motto-text {
+    font-size: 22.148px; } }
+
+@media screen and (max-width: 530px) {
+  .l-buttons {
+    margin-top: 1em; }
+  .l-buttons__button {
+    margin-bottom: 1em; }
+  .caption {
+    font-size: 16.611px; }
+  .name {
+    font-size: 39.375px; } }
+
 @media screen and (max-width: 900px) {
-  h4 {
-    font-size: 29.531px; }
   .quote {
     font-size: 16.611px; }
   .caption {
@@ -965,21 +1009,82 @@ a {
   .button, .button--inverted {
     font-size: 16.611px; } }
 
-@media screen and (max-width: 780px) {
-  .name {
-    font-size: 52.5px; } }
-
-@media screen and (max-width: 680px) {
-  .hero__circle {
-    width: 150px;
-    height: 150px;
-    border-radius: 75px; }
-  .hero__header {
+@media screen and (max-width: 768px) {
+  .header-l1 {
     font-size: 52.5px; }
-  .hero__header-caption {
+  .remedy__container--left, .remedy__container--right {
+    height: 56.25px; }
+  .remedy__image--left, .remedy__image--right {
+    width: 112.5px;
+    height: 112.5px;
+    border-radius: 56.25px;
+    -webkit-box-shadow: inset 0 0 0 2px #e0f2b6, inset 0 0 0 4px #2a330f;
+            box-shadow: inset 0 0 0 2px #e0f2b6, inset 0 0 0 4px #2a330f; }
+  .remedy__image--left {
+    margin-bottom: -56.25px;
+    margin-left: 30px;
+    margin-right: 25px;
+    float: left; }
+  .remedy__image--right {
+    margin-top: -56.25px;
+    margin-right: 30px;
+    margin-left: 25px;
+    float: right; }
+  .remedy__text {
+    font-size: 16.611px; }
+  .description__image {
+    max-width: 60%; }
+  .description__header {
+    font-size: 29.531px; }
+  .description__text {
+    font-size: 16.611px; }
+  .description__container {
+    width: 90%; }
+  .description__link {
+    font-size: 16.611px; }
+  .testimonial__email,
+  .testimonial__text {
+    font-size: 16.611px; }
+  .testimonial__image {
+    width: 112.5px;
+    height: 112.5px;
+    margin-top: -56.25px; }
+  .testimonial__name,
+  .testimonial__email,
+  .testimonial__text {
+    padding-left: 150px; } }
+
+@media screen and (max-width: 640px) {
+  .header-l1 {
     font-size: 39.375px; }
-  .hero__motto-text {
-    font-size: 22.148px; } }
+  .header-l3 {
+    font-size: 29.531px; }
+  .remedy__image--left, .remedy__image--right {
+    width: 56.25px;
+    height: 56.25px;
+    border-radius: 28.125px;
+    -webkit-box-shadow: unset;
+            box-shadow: unset;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-box-shadow: 0 0 0 2px #2a330f;
+            box-shadow: 0 0 0 2px #2a330f; }
+  .remedy__container--left,
+  .remedy__container--right {
+    padding: 0;
+    text-align: left;
+    background-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(15%, rgba(224, 242, 182, 0.5)), to(transparent));
+    background-image: linear-gradient(to right, transparent, rgba(224, 242, 182, 0.5) 15%, transparent 100%); }
+  .remedy__image--right,
+  .remedy__image--left {
+    float: left;
+    margin: 0;
+    margin-left: 25px;
+    margin-right: 30px; }
+  .description__header {
+    font-size: 22.148px; }
+  .description__image {
+    max-width: 80%; } }
 
 @media screen and (max-width: 550px) {
   .hero__break {
@@ -994,7 +1099,7 @@ a {
   .hero__header-caption {
     font-size: 29.531px; } }
 
-@media screen and (orientation: landscape) and (max-height: 640px) {
+@media screen and (max-height: 650px) {
   .hero__header {
     font-size: 39.375px; }
   .hero__header-caption {
@@ -1002,8 +1107,63 @@ a {
   .hero__motto-text {
     font-size: 16.611px; }
   .hero__circle {
-    width: 100px;
-    height: 100px;
-    border-radius: 50px; }
+    width: 150px;
+    height: 150px;
+    border-radius: 75px; }
+  .hero__logo {
+    top: 20%; } }
+
+@media screen and (max-height: 500px) {
   .hero__logo {
     top: 10%; } }
+
+@media screen and (max-height: 400px) {
+  .hero__circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px; } }
+
+@media screen and (max-width: 600px) {
+  .perks__item1, .perks__item2, .perks__item3 {
+    float: none;
+    display: block;
+    background-image: none;
+    width: auto;
+    height: auto; }
+    .perks__item1:before, .perks__item2:before, .perks__item3:before {
+      content: "";
+      display: inline-block;
+      margin-bottom: -0.1em;
+      margin-right: 0.5em;
+      width: 0.8em;
+      height: 0.8em;
+      border-radius: 0.5em;
+      background-color: #0f9999; } }
+
+@media screen and (max-width: 450px) {
+  .perks__item1, .perks__item2, .perks__item3 {
+    padding-left: 0; } }
+
+@media screen and (max-width: 480px) {
+  .remedy__container--left,
+  .remedy__container--right {
+    background-image: linear-gradient(to right, transparent, transparent 25px, rgba(224, 242, 182, 0.5) 25px, transparent 100%); }
+  .remedy__image--right,
+  .remedy__image--left {
+    margin-left: -6.25px;
+    margin-right: 10px; }
+  .header-l1 {
+    font-size: 29.531px; }
+  .description {
+    margin: 2em 0; }
+  .description__container {
+    width: auto; }
+  .description__header {
+    font-size: 16.611px; }
+  .testimonial__image {
+    margin-bottom: 1em; }
+  .testimonial__name {
+    font-weight: bold;
+    font-size: 22.148px; }
+  .testimonial__text {
+    padding-left: 1.5em; } }

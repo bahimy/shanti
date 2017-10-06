@@ -21,10 +21,17 @@ a {
   margin-top: 0;
 }
 
+.caption__brake {
+  display: none;
+}
+
 .quote {
   width: 60%;
   margin-left: 1em;
 }
+
+
+/* medias */
 
 @media screen and (max-width: 900px) {
   .quote {
@@ -38,6 +45,38 @@ a {
 
 @media screen and (max-width: 780px) {
   .name {
+    // font-size: $text-beta;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-l1 {
     font-size: $text-beta;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .quote {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .header-l1 {
+    font-size: $text-gamma;
+  }
+
+  .header-l3 {
+    font-size: $text-delta;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .caption {
+    font-size: $text-zeta;
+  }
+
+  .name {
+    font-size: $text-gamma;
   }
 }

@@ -22,11 +22,21 @@
     content: "";
     display: block;
     position: absolute;
-    height: 100px;
+    top: 0;
+    bottom: 0;
+    // height: 100px;
     width: 5000px;
     background-color: $color-mediumgreen;
     margin-left: -2500px;
     z-index: -1;
+  }
+}
+
+/* Medias */
+
+@media screen and (max-width: 800px) {
+  .l-container {
+    padding: 1em 1em 1em;
   }
 }
 
@@ -76,6 +86,26 @@
     margin-right: 0;
   }
 }
+
+
+/* medias */
+
+@media screen and (max-width: 680px) {
+  .l-background:after {
+    background-image: none;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .l-buttons {
+    margin-top: 1em;
+  }
+
+  .l-buttons__button {
+    margin-bottom: 1em;
+  }
+}
+
 
 
 

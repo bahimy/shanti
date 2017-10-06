@@ -136,9 +136,7 @@
   }
 }
 
-@media screen
-and (orientation: landscape)
-and (max-height: 640px) {
+@media screen and (max-height: 650px) {
   .hero__header {
     font-size: $text-gamma;
   }
@@ -152,13 +150,27 @@ and (max-height: 640px) {
   }
 
   .hero__circle {
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
   }
 
   .hero__logo {
+    top: 20%;
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .hero__logo {
     top: 10%;
+  }
+}
+
+@media screen and (max-height: 400px) {
+  .hero__circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
   }
 }
 
