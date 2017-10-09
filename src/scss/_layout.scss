@@ -3,6 +3,7 @@
 .l-body {
   background-color: $color-lightgreen;
   font-size: $text-zeta;
+  position: relative;
 }
 
 .l-container {
@@ -139,6 +140,16 @@
   background-color: $color-darkgreen;
 }
 
+////// Various sections //////
+
+/* Medias */
+
+@media screen and (max-width: 480px) {
+  .l-various p {
+    font-size: $text-zeta;
+  }
+}
+
 
 
 
@@ -150,11 +161,46 @@
   color: $color-lightgreen;
 }
 
+.l-address {
+  float: left;
+  width: 39%;
+}
+
 .l-map {
-  width: 60%;
+  width: 59%;
   height: 300px;
   float: right;
   border: 2px solid $color-mediumgreen;
   border-radius: 10px;
   // pointer-events: none;
+}
+
+/* @medias */
+
+@media screen and (max-width: 600px) {
+  .l-address,
+  .l-map {
+    float: none;
+    width: 100%;
+    margin-bottom: 2em;
+  }
+
+  .l-map {
+    border-width: 0;
+    border-radius: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .l-contacts p {
+    font-size: $text-zeta;
+  }
+
+  .l-contacts h4 {
+    font-size: $text-epsilon;
+  }
 }

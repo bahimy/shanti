@@ -43,12 +43,6 @@ a {
   }
 }
 
-@media screen and (max-width: 780px) {
-  .name {
-    // font-size: $text-beta;
-  }
-}
-
 @media screen and (max-width: 768px) {
   .header-l1 {
     font-size: $text-beta;
@@ -78,5 +72,11 @@ a {
 
   .name {
     font-size: $text-gamma;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header-l4 {
+    font-size: $text-epsilon;
   }
 }

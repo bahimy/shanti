@@ -214,7 +214,21 @@
 }
 
 .school {
-  height: 80vh;
+  max-height: 80vh;
   width: 80vw;
   overflow: auto;
+}
+
+.descript {
+  max-height: 80vh;
+  width: 80vw;
+  overflow: auto;
+}
+
+/* Medias */
+
+@media screen and (max-width: 768px) {
+  .popup p {
+    font-size: $text-zeta;
+  }
 }

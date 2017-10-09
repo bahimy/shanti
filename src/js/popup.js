@@ -6,7 +6,8 @@
     var elementToBlock = {
         'js-book': 'js-contacts',
         'js-viewprices': 'js-prices',
-        'js-viewschool': 'js-school'
+        'js-viewschool': 'js-school',
+        'js-showdescription': 'js-descript'
     };
 
     var hidePopup = function() {
