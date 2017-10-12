@@ -19,17 +19,20 @@
         Array.prototype.slice.call(
             document.querySelectorAll('.' + element), null
         ).forEach(function(currentTarget) {
+
+            var staticSelector = (function(selector) {
+                return '.' + selector;
+            })(elementToBlock[element]);
+
             currentTarget.addEventListener('click', function(e) {
 
                 while(popupContainer.firstChild)
                     popupContainer.removeChild(popupContainer.firstChild);
 
-                popupContainer.appendChild(
-                    document.querySelector('.' +
-                        elementToBlock[currentTarget.className
-                            .match(/js-\w*/)[0]]
-                    ).cloneNode(true)
-                );
+                var elementToAppend = document.querySelector(staticSelector).
+                    cloneNode(true);
+
+                popupContainer.appendChild(elementToAppend);
 
                 popupArea.classList.remove('u-hidden');
                 popupArea.classList.add('u-opaque');
@@ -38,58 +41,6 @@
             });
         });
     }
-
-    /* var buttonBook = Array.prototype.slice.call(
-        document.querySelectorAll('.js-book'), null
-    );
-    var buttonViewPrices = Array.prototype.slice.call(
-        document.querySelectorAll('.js-viewprices'), null
-    );
-
-    var linkAnother = document.querySelector('.js-viewanother');
-    var linkSchool = document.querySelector('.js-viewschool');
-
-    var popupContainer = document.querySelector('.js-container');
-
-    var popupPrices = document.querySelector('.js-prices');
-    var popupContacts = document.querySelector('.js-contacts');
-
-    var hidePopup = function() {
-        popupArea.classList.add('u-hidden');
-        popupArea.classList.remove('u-opaque');
-    };
-
-    buttonBook.forEach(function(current) {
-        current.addEventListener('click', function(e) {
-            while(popupContainer.firstChild)
-                popupContainer.removeChild(popupContainer.firstChild);
-            popupArea.classList.remove('u-hidden');
-            popupArea.classList.add('u-opaque');
-            popupContainer.appendChild(popupContacts);
-            e.stopPropagation();
-        });
-    });
-
-    buttonViewPrices.forEach(function(current) {
-        current.addEventListener('click', function(e) {
-            while(popupContainer.firstChild)
-                popupContainer.removeChild(popupContainer.firstChild);
-            popupArea.classList.remove('u-hidden');
-            popupArea.classList.add('u-opaque');
-            popupContainer.appendChild(popupPrices);
-            e.stopPropagation();
-        });
-    });
-
-    linkAnother.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-    });
-
-    linkSchool.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-    }); */
 
     // Hide popup when clicked any place of a page...
     document.body.addEventListener('click', hidePopup);
