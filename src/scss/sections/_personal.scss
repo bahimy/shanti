@@ -1,0 +1,31 @@
+.personal__background {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 3em;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    right: -50px;
+    top: 0;
+    bottom: 0;
+    background-image: url("../images/Aleksandra-Lifer.png");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 42% auto;
+    pointer-events: none;
+  }
+}
+
+
+
+/* medias */
+
+@media screen and (max-width: 680px) {
+  .personal__background:after {
+    background-image: none;
+  }
+}

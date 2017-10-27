@@ -1,0 +1,14 @@
+.contacts {
+  background-color: $color-darkgreen;
+  color: $color-lightgreen;
+}
+
+@media screen and (max-width: 375px) {
+  .contacts p {
+    font-size: $text-zeta;
+  }
+
+  .contacts h4 {
+    font-size: $text-epsilon;
+  }
+}

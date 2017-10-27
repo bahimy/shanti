@@ -25,7 +25,6 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    // height: 100px;
     width: 5000px;
     background-color: $color-mediumgreen;
     margin-left: -2500px;
@@ -51,28 +50,6 @@
   overflow: hidden;
 }
 
-.l-background {
-  position: relative;
-  z-index: 1;
-  padding-bottom: 3em;
-
-  &:after {
-    content: "";
-    display: block;
-    position: absolute;
-    z-index: 10;
-    left: 0;
-    right: -50px;
-    top: 0;
-    bottom: 0;
-    background-image: url("../images/Aleksandra-Lifer.png");
-    background-repeat: no-repeat;
-    background-position: bottom right;
-    background-size: 42% auto;
-    pointer-events: none;
-  }
-}
-
 .l-buttons {
   list-style-type: none;
   padding: 0;
@@ -90,12 +67,6 @@
 
 
 /* medias */
-
-@media screen and (max-width: 680px) {
-  .l-background:after {
-    background-image: none;
-  }
-}
 
 @media screen and (max-width: 530px) {
   .l-buttons {
@@ -140,26 +111,11 @@
   background-color: $color-darkgreen;
 }
 
-////// Various sections //////
-
-/* Medias */
-
-@media screen and (max-width: 480px) {
-  .l-various p {
-    font-size: $text-zeta;
-  }
-}
-
 
 
 
 
 ////// Contacts sectioon //////
-
-.l-contacts {
-  background-color: $color-darkgreen;
-  color: $color-lightgreen;
-}
 
 .l-address {
   float: left;
@@ -192,15 +148,5 @@
     left: 0;
     right: 0;
     margin-bottom: 0;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  .l-contacts p {
-    font-size: $text-zeta;
-  }
-
-  .l-contacts h4 {
-    font-size: $text-epsilon;
   }
 }
