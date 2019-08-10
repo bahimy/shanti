@@ -11,7 +11,8 @@
   width: 100%;
   height: 100%;
   background-color: $color-darkgreen;
-  background-image: url('../images/treetops.jpg');
+  // background-image: url('../images/treetops.jpg');
+  background-image: url('../images/dawn.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -41,49 +42,62 @@
   width: 200px;
   height: 200px;
   border-radius: 100px;
-  border: 3px solid $color-canvas;
+  // border: 3px solid $color-canvas;
+  border: 3px solid $color-lightgreen;
   margin: 0 auto;
 }
 
 .hero__header {
-  text-transform: uppercase;
+  // margin-bottom: 0;
+  text-transform: capitalize;
+  font-variant: small-caps;
   line-height: 0.9;
+  letter-spacing: .3em;
+  word-spacing: -.3em;
+  text-shadow: 2px 2px 0 black;
+  color: $color-lightgreen;
 }
 
 .hero__header-caption {
-  font-size: $text-beta;
+  font-size: $text-gamma;
+  text-transform: uppercase;
+  word-spacing: 0.2em;
 }
 
 .hero__motto {
+  font-variant: small-caps;
   margin: 0 auto;
+  vertical-align: middle;
+  letter-spacing: .3em;
   width: 80%;
   text-align: center;
-  background-image: linear-gradient(to right, transparent, rgb(20, 26, 5), transparent);
+  font-family: $text-sans;
+  // background-image: linear-gradient(to right, transparent, rgb(20, 26, 5), transparent);
+}
+
+.hero__tracery {
+  vertical-align: 15%;
+  content: "";
+  display: inline-block;
+  width: 41px;
+  height: 16px;
 }
 
 .hero__tracery-left {
-  content: "";
-  display: inline-block;
-  width: 37px;
-  height: 16px;
-  margin-right: 3px;
   background: url('../images/tracery_left.png') no-repeat;
 }
 
 .hero__tracery-right {
-  content: "";
-  display: inline-block;
-  width: 37px;
-  height: 16px;
-  margin-left: 3px;
   background: url('../images/tracery_right.png') no-repeat;
 }
 
 .hero__motto-text {
+  color: $color-lightgreen;
   display: inline-block;
   font-size: $text-delta;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
+  text-shadow: 1px 1px 0 black;
 }
 
 .hero__break {

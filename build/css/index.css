@@ -422,6 +422,7 @@ h3 {
 
 h4 {
   font-size: 39.375px;
+  color: #bf8000;
   margin-bottom: 0.6em; }
 
 h5 {
@@ -500,7 +501,7 @@ a {
 .caption {
   font-size: 29.531px;
   font-family: Tahoma, Arial, sans-serif;
-  color: #2a330f;
+  color: #698026;
   margin-top: 0; }
 
 .caption__brake {
@@ -802,7 +803,7 @@ a {
 
 .button, .button--inverted {
   font-size: 22.148px;
-  background-color: #698026;
+  background-color: #bf8000;
   border-width: 0;
   color: #e0f2b6;
   padding: 0.3em 1em;
@@ -839,7 +840,7 @@ a {
   width: 100%;
   height: 100%;
   background-color: #2a330f;
-  background-image: url("../images/treetops.jpg");
+  background-image: url("../images/dawn.jpg");
   background-repeat: no-repeat;
   background-size: cover; }
 
@@ -869,40 +870,48 @@ a {
   margin: 0 auto; }
 
 .hero__header {
-  text-transform: uppercase;
-  line-height: 0.9; }
+  text-transform: capitalize;
+  font-variant: small-caps;
+  line-height: 0.9;
+  letter-spacing: .3em;
+  word-spacing: -.3em;
+  text-shadow: 2px 2px 0 black;
+  color: #e0f2b6; }
 
 .hero__header-caption {
-  font-size: 52.5px; }
+  font-size: 39.375px;
+  text-transform: uppercase;
+  word-spacing: 0.2em; }
 
 .hero__motto {
+  font-variant: small-caps;
   margin: 0 auto;
+  vertical-align: middle;
+  letter-spacing: .3em;
   width: 80%;
   text-align: center;
-  background-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(#141a05), to(transparent));
-  background-image: linear-gradient(to right, transparent, #141a05, transparent); }
+  font-family: Tahoma, Arial, sans-serif; }
 
-.hero__tracery-left {
+.hero__tracery {
+  vertical-align: 15%;
   content: "";
   display: inline-block;
-  width: 37px;
-  height: 16px;
-  margin-right: 3px;
+  width: 41px;
+  height: 16px; }
+
+.hero__tracery-left {
   background: url("../images/tracery_left.png") no-repeat; }
 
 .hero__tracery-right {
-  content: "";
-  display: inline-block;
-  width: 37px;
-  height: 16px;
-  margin-left: 3px;
   background: url("../images/tracery_right.png") no-repeat; }
 
 .hero__motto-text {
+  color: #e0f2b6;
   display: inline-block;
   font-size: 29.531px;
   margin-top: 0.5em;
-  margin-bottom: 0.5em; }
+  margin-bottom: 0.5em;
+  text-shadow: 1px 1px 0 black; }
 
 .hero__break {
   display: none; }
