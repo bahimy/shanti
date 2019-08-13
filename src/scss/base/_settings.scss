@@ -4,11 +4,12 @@ $color-darkgreen: rgb(42, 51, 15);
 $color-mediumgreen: rgb(105, 128, 38);
 $color-lightgreen: rgb(224, 242, 182);
 $color-gold: rgb(191, 128, 0);
+$color-shadow: rgb(59, 29, 20);
 $color-blue: rgb(15, 153, 153);
 $color-gold-light: rgb(252, 186, 106);
-$color-berry: rgb(255, 133, 214);
 
 $color-canvas: $color-lightgreen;
+$color-strong: $color-darkgreen;
 
 
 
@@ -59,7 +60,7 @@ h1 {
 
 h2 {
   font-size: $text-alpha;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 h3 {
@@ -68,7 +69,6 @@ h3 {
 
 h4 {
   font-size: $text-gamma;
-  color: $color-gold;
   margin-bottom: 0.6em;
 }
 

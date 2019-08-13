@@ -12,7 +12,8 @@
   height: 100%;
   background-color: $color-darkgreen;
   // background-image: url('../images/treetops.jpg');
-  background-image: url('../images/dawn.jpg');
+  // background-image: url('../images/dawn.jpg');
+  background-image: url('../images/terraces.webp');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -67,7 +68,7 @@
 .hero__motto {
   font-variant: small-caps;
   margin: 0 auto;
-  vertical-align: middle;
+  // vertical-align: middle;
   letter-spacing: .3em;
   width: 80%;
   text-align: center;
@@ -77,27 +78,36 @@
 
 .hero__tracery {
   vertical-align: 15%;
-  content: "";
-  display: inline-block;
+  // content: "";
+  display: block;
   width: 41px;
-  height: 16px;
+  // height: 16px;
+  height: 24px;
+  background-position: center;
 }
 
 .hero__tracery-left {
-  background: url('../images/tracery_left.png') no-repeat;
+  float: left;
+  margin-right: 9px;
+  background: no-repeat center url('../images/tracery_left.png');
 }
 
 .hero__tracery-right {
-  background: url('../images/tracery_right.png') no-repeat;
+  float: right;
+  margin-left: 9px;
+  background: no-repeat center url('../images/tracery_right.png');
 }
 
 .hero__motto-text {
+  padding: 0 50px;
   color: $color-lightgreen;
   display: inline-block;
   font-size: $text-delta;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   text-shadow: 1px 1px 0 black;
+  background: no-repeat center right url('../images/tracery_right.png'),
+              no-repeat center left url('../images/tracery_left.png');
 }
 
 .hero__break {
@@ -106,6 +116,15 @@
 
 
 /* media section */
+
+@media screen and (max-width: 730px) {
+  .hero__motto {
+    width: 370px;
+  }
+  .hero__motto-text {
+    background-position: bottom right, bottom left;
+  }
+}
 
 @media screen and (max-width: 680px) {
   .hero__circle {
